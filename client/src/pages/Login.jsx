@@ -13,7 +13,7 @@ const Login = () => {
   return (
     <>
       {/* HERO SECTION */}
-      <div id="container" className={[styles.signin].join(' ')}>
+      <div className={[styles.signin].join(' ')}>
         <div className={styles.row}>
           <div className={[styles.lop, styles.alignitemscenter, styles.flexcol].join(' ')}>
             <div className={[styles.formwrapper, styles.alignitemscenter].join(' ')}>
