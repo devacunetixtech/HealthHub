@@ -30,14 +30,14 @@ a {
 
 .bigwrapper {
   position: relative;
-  padding: 1.7rem 0 2rem;
+  padding: 0.3rem 0 2rem;
   width: 100%;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   overflow: hidden;
-  /* background-color: #f1f8fc; */
+  background-color: #f1f8fc;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .container {

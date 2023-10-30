@@ -7,7 +7,7 @@ const PreRegister = () =>{
     return ( 
     <>
       <main className="mb-3">
-        <div className={styles.bigwrapper}>
+        {/* <div className={styles.bigwrapper}> */}
           <div className={styles.bigwrapper}>
             <div className={styles.container}>
               <div className={styles.card}>
@@ -26,8 +26,8 @@ const PreRegister = () =>{
               </div>
             </div>
           </div>
-          <button className={styles.togglebtn}></button>
-        </div>
+          {/* <button className={styles.togglebtn}>hhhhh</button> */}
+        {/* </div> */}
       </main>
     </>
     );

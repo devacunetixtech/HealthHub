@@ -19,6 +19,7 @@ const Login = () => {
             <div className={[styles.formwrapper, styles.alignitemscenter].join(' ')}>
               <div className={[styles.form, styles.signin].join(' ')}>
                 <form onSubmit={loginUser}>
+                  <div className="mt-2">
                   <label>ACCOUNT TYPE: </label>
                   <select name="accountType" id="accountType"                   
                     onChange={(e) => 
@@ -29,6 +30,7 @@ const Login = () => {
                     <option value="USER">USER</option>
                         <option value="MEDIC">MEDIC</option>
                   </select>
+                  </div>
                   <div className={styles.inputgroup}>
                     <i className='bx bxs-envelope'></i>
                     <input type="email" placeholder="Email"

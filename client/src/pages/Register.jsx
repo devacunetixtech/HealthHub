@@ -21,7 +21,8 @@ const Register = () =>{
             <div className={[styles.formwrapper, styles.alignitemscenter].join(' ')}>
               <div className={[styles.form, styles.signin].join(' ')}>
                 <form onSubmit={registerUser}>
-                <label>ACCOUNT TYPE: </label>
+                  <div className="mt-2">
+                  <label>ACCOUNT TYPE: </label>
                   <select name="accountType" id="accountType"                   
                     onChange={(e) => 
                       updateRegisterInfo({...registerInfo, acctType: e.target.value})
@@ -31,6 +32,7 @@ const Register = () =>{
                     <option value="USER">USER</option>
                         <option value="MEDIC">MEDIC</option>
                   </select>
+                  </div>
                   <div className={styles.inputgroup}>
                     <i className='bx bxs-user'></i>
                     <input type="text" placeholder="Full Name"
