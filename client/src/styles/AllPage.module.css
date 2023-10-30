@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.stopscrolling {
+  height: 100%;
+  overflow: hidden;
+}
+.container .navbar{
+  display: flex;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bigwrapper {
+  position: relative;
+  padding: 1.7rem 0 2rem;
+  width: 100%;
+  /* min-height: 100vh; */
+  overflow: hidden;
+  /* background-color: #f1f8fc; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.container {
+  position: relative;
+  /* max-width: 81rem; */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  z-index: 10;
+}
+
+header {
+  position: relative;
+  z-index: 70;
+}
+.container .navbar a{
+  text-decoration: none;
+  color: #fff !important;
+}
+header .container {
+  color: #fff !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar{
+  background-color: #1DA1F2;
+  width: 100%;
+  background-color: #1DA1F2 !important;
+  /* height: 80px; */
+  /* margin-top: -30px; */
+}
+.overlay {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 0.6rem;
+  margin-top: -0.6rem;
+}
+
+.logo h3 {
+  color: #45424b;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.links ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.links a {
+  color: #fff;
+  margin-left: 4.5rem;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: blue;
+  transform: scale(1.05);
+}
+
+.links .btn {
+  display: inline-block;
+  padding: 0.9rem 1.9rem;
+  color: #1DA1F2 !important;
+  background-color: #fff;
+  border-radius: 16px;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.9rem;
+  color: #fff !important;
+  background-color: #1DA1F2;
+  border-radius: 16px;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #5bacdf;
+  color: #fff !important;
+  transform: scale(1) !important;
+}
+
+.hamburgermenu {
+  position: relative;
+  z-index: 99;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburgermenu .bar {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: #45424b;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #45424b;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.bar::before {
+  transform: translateY(-8px);
+}
+
+.bar::after {
+  transform: translateY(8px);
+}
+
+.bigwrapper.active .hamburgermenu .bar {
+  background-color: transparent;
+}
+
+.bigwrapper.active .bar::before {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.bigwrapper.active .bar::after {
+  transform: translateY(0) rotate(45deg);
+}
+
+.showcasearea .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+.bigtitle {
+  font-size: 2.7rem;
+  color: #312f3a;
+  text-transform: capitalize;
+  line-height: 1.4;
+}
+
+.text {
+  /* color: #919195; */
+  font-size: 1.1rem;
+  margin: 1.9rem 0 2.5rem;
+  max-width: 600px;
+  line-height: 2.2;
+}
+
+.showcasearea .btn {
+  box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
+}
+
+.hero {
+  width: 115%;
+  transform: translate(15%, 25px);
+}
+
+
+
+.togglebtn i {
+  line-height: 39px;
+}
+
+.togglebtn:hover {
+  background: #1DA1F2;
+}
+
+.bigwrapper .togglebtn i:last-child {
+  display: none;
+}
+
+.bigwrapper .togglebtn i:first-child {
+  display: block;
+}
+
+.bigwrapper .togglebtn i:last-child {
+  display: block;
+}
+
+.bigwrapper .togglebtn i:first-child {
+  display: none;
+}
+
+.shape {
+  position: absolute;
+  z-index: 0;
+  width: 500px;
+  bottom: -180px;
+  left: -15px;
+  opacity: 0.1;
+}
+
+.copy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  animation: appear 1s 1 both;
+}
+/* Add this to your existing CSS */
+.card {
+  background-color: #FFFFFF1A ;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.cardoptions {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF1A;
+  padding: .5rem;
+}
+
+.option {
+  text-align: center;
+  flex: 1;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option i {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cardcontent {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.subcard {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 0 1rem;
+  transition: 0.3s;
+}
+
+.subcard:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Add any other styles you need */
+
+
+@keyframes appear {
+  0% {
+    clip-path: circle(30% at -25% -25%);
+  }
+  100% {
+    clip-path: circle(150% at 0 0);
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .hamburgermenu {
+    display: flex;
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 450px;
+    width: 100%;
+    height: 100%;
+    background-color: #1DA1F2;
+    z-index: 95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: 0.5s;
+  }
+  .cardcontent {
+    display: block;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .links ul {
+    flex-direction: column;
+  }
+
+  .links a {
+    color: #fff;
+    margin-left: 0;
+    padding: 2rem 0;
+  }
+
+  .links .btn {
+    background: none;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  .bigwrapper.active .links {
+    transform: translateX(0);
+    box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  .bigwrapper.active .overlay {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  .showcasearea {
+    padding: 2.5rem 0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .showcasearea .container {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    grid-gap: 2rem;
+  }
+
+  .bigtitle {
+    font-size: 1.1rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+    margin: 1.4rem 0 1.5rem;
+  }
+
+  .hero {
+    width: 155%;
+    transform: none;
+    margin-left: -40px
+  }
+
+  .logo h3 {
+    font-size: 1.25rem;
+  }
+
+  .shape {
+    bottom: -180px;
+    left: -50px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .bigtitle {
+    font-size: 1.4rem;
+  }
+
+  .text {
+    margin: 1.1rem 0 1.5rem;
+  }
+
+  .showcasearea .btn {
+    font-size: 0.8rem;
+  }
+}

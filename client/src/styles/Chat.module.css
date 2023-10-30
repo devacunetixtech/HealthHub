@@ -1,0 +1,74 @@
+/* Chat.module.css (or your CSS module file) */
+
+.chatcontainer {
+    width: 100vw;
+    border: 1px solid red;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 20vh; */
+    position: fixed;
+    bottom: 6vh;
+  }
+  
+  .chatmessages {
+    padding: 1rem;
+    flex-grow: 1;
+    overflow-y: auto; /* Allows scrolling when content overflows */
+    background-color: #f9f9f9;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 85vh;
+  }
+  
+  .message {
+    background: #1DA1F2;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 4px;
+    max-width: 80%;
+  }
+  
+  .message.user {
+    align-self: flex-end;
+    background: #2ECC71;
+  }
+  
+  /* Chat.module.css (or your CSS module file) */
+  
+  .chatinput {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* padding: 1rem; */
+    background-color: white; /* Add your desired background color */
+    border-top: 1px solid red;
+  }
+  
+  .chatinput input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0;
+  }
+  
+  .chatinput button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0;
+  }
+  
+  /* Rest of your styles */
+  
+  button:hover {
+    background: #0E70A4;
+  }
+  
