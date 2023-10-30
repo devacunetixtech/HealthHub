@@ -19,6 +19,16 @@ const Login = () => {
             <div className={[styles.formwrapper, styles.alignitemscenter].join(' ')}>
               <div className={[styles.form, styles.signin].join(' ')}>
                 <form onSubmit={loginUser}>
+                  <label>ACCOUNT TYPE: </label>
+                  <select name="accountType" id="accountType"                   
+                    onChange={(e) => 
+                      updateLoginInfo({...loginInfo, acctType: e.target.value})
+                    } 
+                  > 
+                    <option value="">choose one</option>
+                    <option value="USER">USER</option>
+                        <option value="MEDIC">MEDIC</option>
+                  </select>
                   <div className={styles.inputgroup}>
                     <i className='bx bxs-envelope'></i>
                     <input type="email" placeholder="Email"

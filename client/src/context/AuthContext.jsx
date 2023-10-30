@@ -9,18 +9,12 @@ export const AuthContextProvider = ({ children }) =>{
     const [user, setUser] = useState(null);
     const navigateTo = useNavigate();
     const [formSubmitted, setFormSubmitted] = useState(false);
-    const accType = localStorage.getItem("accType")
 
-    useEffect(()=>{
-        const user = localStorage.getItem("User")
-        setUser(JSON.parse(user));
-    
-        console.log(accType)
-    }, []);
+
     const [registerError, setRegisterError] = useState(null);
     const [isRegisterLoading, setIsRegisterLoading] = useState(false);    
     const [ registerInfo, setRegisterInfo] = useState({
-        acctType: accType,
+        acctType: "",
         name: "",
         username: "",
         email: "",
@@ -31,7 +25,7 @@ export const AuthContextProvider = ({ children }) =>{
     const [loginError, setLoginError] = useState(null);
     const [isLoginLoading, setIsLoginLoading] = useState(false);
     const [ loginInfo, setLoginInfo] = useState({
-        acctType: accType,
+        acctType: "",
         email: "",
         password: "",
     });
@@ -54,8 +48,10 @@ export const AuthContextProvider = ({ children }) =>{
     //     recipientID: "",
     //     content: "",
     // });
-    
-
+    useEffect(()=>{
+        const user = localStorage.getItem("User")
+        setUser(JSON.parse(user));
+    }, []);
 
     console.log("registerInfo", registerInfo);
     console.log("loginInfo", loginInfo);

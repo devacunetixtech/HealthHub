@@ -21,6 +21,16 @@ const Register = () =>{
             <div className={[styles.formwrapper, styles.alignitemscenter].join(' ')}>
               <div className={[styles.form, styles.signin].join(' ')}>
                 <form onSubmit={registerUser}>
+                <label>ACCOUNT TYPE: </label>
+                  <select name="accountType" id="accountType"                   
+                    onChange={(e) => 
+                      updateRegisterInfo({...registerInfo, acctType: e.target.value})
+                    } 
+                  > 
+                    <option value="">choose one</option>
+                    <option value="USER">USER</option>
+                        <option value="MEDIC">MEDIC</option>
+                  </select>
                   <div className={styles.inputgroup}>
                     <i className='bx bxs-user'></i>
                     <input type="text" placeholder="Full Name"
