@@ -20,7 +20,7 @@ const Login = () => {
               <div className={[styles.form, styles.signin].join(' ')}>
                 <form onSubmit={loginUser}>
                   <div className="mt-2">
-                  <label>ACCOUNT TYPE: </label>
+                  <label>ACCOUNT TYPEE: </label>
                   <select name="accountType" id="accountType"                   
                     onChange={(e) => 
                       updateLoginInfo({...loginInfo, acctType: e.target.value})
